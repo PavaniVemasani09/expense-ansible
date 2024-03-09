@@ -1,0 +1,5 @@
+- name: FrontEnd Expense
+  hosts: all
+  tasks:
+    - name: install nginx
+      state: latest
