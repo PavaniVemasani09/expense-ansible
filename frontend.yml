@@ -6,14 +6,17 @@
       ansible.builtin.dnf:
         name: nginx
         state: latest
+
     - name: Enable and start nginx
       ansible.builtin.systemd_service:
         state: started
         name: nginx
+
     - name: clean the code
       ansible.builtin.file:
         path: /usr/share/nginx/html
         state: absent
+
     - name: Download and extract frontend file
       ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
