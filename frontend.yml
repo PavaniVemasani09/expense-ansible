@@ -18,7 +18,7 @@
       ansible.builtin.get_url:
         url: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
         dest: /tmp/frontend.zip
-     - name: unarchive a file path
+    - name: unarchive a file path
        ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
         dest: /tmp/frontend.zip
