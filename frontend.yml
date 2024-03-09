@@ -20,7 +20,7 @@
         dest: /tmp/frontend.zip
     - name: unarchive a file path
        ansible.builtin.unarchive:
-        src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
+        src: /tmp/frontend.zip
         dest: /usr/share/nginx/html
         remote_src: yes
 
