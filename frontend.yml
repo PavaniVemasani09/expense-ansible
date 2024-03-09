@@ -15,7 +15,7 @@
     - name: clean the code
       ansible.builtin.file:
         path: /usr/share/nginx/html
-        state: absent
+        state: directory
 
     - name: Download and extract frontend file
       ansible.builtin.unarchive:
