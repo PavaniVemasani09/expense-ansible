@@ -2,4 +2,6 @@
   hosts: all
   tasks:
     - name: install nginx
-      state: latest
+      ansible.builtin.debug:
+        name: nginx
+        state: latest
