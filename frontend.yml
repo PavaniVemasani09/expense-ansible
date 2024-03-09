@@ -10,3 +10,8 @@
       ansible.builtin.systemd_service:
         state: started
         name: nginx
+    - name: clean the code
+      ansible.builtin.blockinfile:
+        path: -rf /usr/share/nginx/html/*
+        append_newline: true
+        prepend_newline: true
