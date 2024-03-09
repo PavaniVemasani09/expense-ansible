@@ -1,8 +1,8 @@
 - name: FrontEnd Expense
   hosts: all
+  become: yes
   tasks:
     - name: install nginx
-      ansible.builtin.sudo:
-        ansible.builtin.dnf:
-          name: nginx
-           state: latest
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
